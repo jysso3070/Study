@@ -1,0 +1,66 @@
+게임서버 프로그래밍 2018년도 중간고사
+
+1. 많은 동시 접속 인원을 처리하기 위해 온라인 게임을 서비스하는 서버에 다음과 같은 정책을 시행하기도 한다.
+이 정책들을 간단히 설명하고 장단점을 쓰시오
+	1) 샤딩,  2) 기능별 분산,  3)공간 분할
+
+2. 클라이언트와 서버 사이의 프로토콜을 바이너리 포맷으로 정의하지 않고, c언어 struct로 정의해서 사용하는 경우가 있다
+이때 "#pragma pack (push, 1)"
+
+3. 서버용 컴퓨터에서 사용되는 CPU인 XEON이나 EPYC의 경우 코어의 개수가 일반 데스크탑 CPU의 몇배나 된다. 그 이유는
+무엇인가?
+
+4. 다음 서버 네트워크 I/O모델의 단점을 각각 적으시오
+	1) client당 하나의 쓰레드를 할당하는 모델
+	2) WSAOverlapped Event 모델
+	3) Select
+	4) Non-Blocking I/O
+
+5. OX문제
+	a. overlapped 는 달리 asimultaneous 라고도 불린다  - X
+	b. LINUX에서는 select함수를 통해서 overlapped 스타일의 모델을 구현한다. - X
+	c. overlapped에서는 하나에 소켓에 대해서 여러 개의 send를 동시에 처리할 수 없다. - X
+	d. overlapped에서는 데이터 전송을 위해 send 대신 WSASend API를 반드시 사용해야한다 - O
+	e. overlapped 에서 사용된 오버랩 구조체는 다른 곳에서 사용하지 않고 있다면 재사용 가능하다 - O
+	f. overlapped을 통한 send나 recv요청은 blocking 방식으로 처리 되지 않는다. - O
+	g. overlapped 을 통해 데이터 수신을 할 경우 앞에서 한 recv 요청이 완료되는것을 기다렷다가 recv 해야한다.
+
+6. IOCP에 대해 틀린 설명 고르기   틀린것 = B D F
+	a. 전용 api로는 creativecompletionport와 IOCPRegisterSocket, IOCPAddToThreadPool
+	b. CreateIOCompletionPort 에서 정의된 개수를 초과하는 스레드를 ThreadPool에 넣을 수 없다
+	c. socket의 close 여부는 getQueuedCompletionPort함수의 return 값을 통해서 파악한다.
+	d. worker thread 이외의 스레드에서 WSAsend의 호출은 불가능하다.
+	e. 하나에 소켓에 대해 여러개의 WSARecv가 동시에 실행되지 않도록 해야한다.
+	f. GetQueueCompletionStatus 는 Recv함수에 사용되고 PostQueueCompletionStatus는 send 함수에 사용된다.
+
+7. IOCP의 GetQueueCompletionStatus 함수에서 부족한 정보를 확장된 overlapped구조체를 통해 얻는다 이때
+추가로 확보해야 하는 정보에는 어떠한 것들이 있는가
+
+8. OX문제
+  a. thread사이의 동기화에스는 지역변수들을 사용한다
+
+
+10. mmog서버에서 부하를 줄이기 위해 시야처리를 채용하고 있다. 이때 시야 판정을 위해 자신과 모든 서버 객체와의
+거리를 계산해야 하는데 모든 객체와의 거리를 계산하는 오버헤드 줄이는 방법에는 무엇이 있는가
+
+11. NPC AI의 구현을 위해 NPC 서버를 따로 분리하는 방법이 있다. 이 때 NPC 서버의 부하가 너무 크다면 어떠한
+방법으로 해결해야 하는가?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

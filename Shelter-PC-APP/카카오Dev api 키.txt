@@ -1,0 +1,22 @@
+네이티브 앱 키
+bfe9dbb198f90f27db24036762ba211a
+REST API 키
+cc7aa32645d56c0b897ffd2f28a2da31
+JavaScript 키
+27b8eef07394ca7350c3e306ea97c924
+Admin 키
+a021d5577fd30c2a67a1efe08663a971
+
+
+
+다음지도 길찾기
+http://map.daum.net/?sName=서울시청&eName=서울고속터미널
+
+
+
+
+http://map.daum.net/?sName=서울시청&eName=경기도 화성시 동탄나루로 55
+
+
+
+{'meta': {'is_end': True, 'total_count': 1, 'pageable_count': 1}, 'documents': [{'road_address': {'undergroun_yn': 'N', 'road_name': '동탄나루로', 'underground_yn': 'N', 'region_2depth_name': '화성시', 'zone_no': '18442', 'sub_building_no': '', 'region_3depth_name': '반송동', 'main_building_no': '55', 'address_name': '경기 화성시 동탄나루로 55', 'y': '37.19186703797667', 'x': '127.07933096413241', 'region_1depth_name': '경기', 'building_name': '동탄나루마을월드메르디앙 반도유보라'}, 'address_name': '경기 화성시 동탄나루로 55', 'address': {'b_code': '4159012700', 'region_3depth_h_name': '동탄2동', 'main_address_no': '212', 'h_code': '4159058600', 'region_2depth_name': '화성시', 'main_adderss_no': '212', 'sub_address_no': '', 'region_3depth_name': '반송동', 'address_name': '경기 화성시 반송동 212', 'y': '37.19151808618851', 'x': '127.07834397869306', 'mountain_yn': 'N', 'zip_code': '445160', 'region_1depth_name': '경기', 'sub_adderss_no': ''}, 'y': '37.19186703797667', 'x': '127.07933096413241', 'address_type': 'ROAD_ADDR'}]}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_14cb187cdd1543ad953428d8f7dd342b {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_14cb187cdd1543ad953428d8f7dd342b" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_14cb187cdd1543ad953428d8f7dd342b = L.map(
+        'map_14cb187cdd1543ad953428d8f7dd342b', {
+        center: [37.5346067124987, 127.094188322941],
+        zoom: 15,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_c5e16da0dce04f249fd8ca7d218fef0d = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_14cb187cdd1543ad953428d8f7dd342b);
+    
+        var marker_f44d6e4a38cd44248a730e8c1f3ca71a = L.marker(
+            [37.534218, 127.093979],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_14cb187cdd1543ad953428d8f7dd342b);
+        
+    
+
+                var icon_209901b246954d6e9f8874367cb263e7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f44d6e4a38cd44248a730e8c1f3ca71a.setIcon(icon_209901b246954d6e9f8874367cb263e7);
+            
+    
+            var popup_590e386b0487480e8404c4614e34ac42 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_1a847e7c344c438c880f72041c03529b = $(`<div id="html_1a847e7c344c438c880f72041c03529b" style="width: 100.0%; height: 100.0%;">동서울터미널</div>`)[0];
+                popup_590e386b0487480e8404c4614e34ac42.setContent(html_1a847e7c344c438c880f72041c03529b);
+            
+
+            marker_f44d6e4a38cd44248a730e8c1f3ca71a.bindPopup(popup_590e386b0487480e8404c4614e34ac42)
+            ;
+
+            
+        
+    
+        var marker_e7cb2f2f994c4a51b6260cef0157f4ca = L.marker(
+            [37.5346067124987, 127.094188322941],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_14cb187cdd1543ad953428d8f7dd342b);
+        
+    
+
+                var icon_d4510164ed844160b2492ad0f90414b8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e7cb2f2f994c4a51b6260cef0157f4ca.setIcon(icon_d4510164ed844160b2492ad0f90414b8);
+            
+    
+            var popup_7fc1a791df0842f981c5e1c9f9534498 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_1f4848bcd1964a0fb93f25ad163d8926 = $(`<div id="html_1f4848bcd1964a0fb93f25ad163d8926" style="width: 100.0%; height: 100.0%;">검색 기준 위치</div>`)[0];
+                popup_7fc1a791df0842f981c5e1c9f9534498.setContent(html_1f4848bcd1964a0fb93f25ad163d8926);
+            
+
+            marker_e7cb2f2f994c4a51b6260cef0157f4ca.bindPopup(popup_7fc1a791df0842f981c5e1c9f9534498)
+            ;
+
+            
+        
+</script>

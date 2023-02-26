@@ -1,0 +1,12 @@
+키값
+AIzaSyBPqsKuiieD3_m6ShpvhpVbS1dO7cjH_aw
+
+
+호출주소
+https://maps.googleapis.com/maps/api/geocode/xml?address=
+
+
+https://maps.googleapis.com/maps/api/geocode/xml?address=%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90+CA&key=AIzaSyBPqsKuiieD3_m6ShpvhpVbS1dO7cjH_aw
+
+https://maps.googleapis.com/maps/api/geocode/xml?address=서울대학교+CA&key=AIzaSyBPqsKuiieD3_m6ShpvhpVbS1dO7cjH_aw
+

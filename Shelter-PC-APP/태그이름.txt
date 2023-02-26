@@ -1,0 +1,15 @@
+시설명 = sheltitle
+구분  = type
+도로명 = adress
+지번 = adress2
+위도 = latitude
+경도 = longitude
+면적 = place
+인원수 = people
+개방여부 = open
+평시활용 = normal
+전화번호 = tel
+관리기관 = caregov
+데이터기준일자 = update
+제공기관코드 = code
+제공기관명 = govsheltitle

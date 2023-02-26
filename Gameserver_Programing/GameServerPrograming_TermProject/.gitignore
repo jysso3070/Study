@@ -1,0 +1,17 @@
+/2015184024_Server/.vs
+/2015184024_Client/.vs
+/2015184024_Client/WindowsProject1/x64
+/2019-Dummy/.vs
+/2015184024_Server(new)/.vs
+/2015184024_Server(new)/.x64
+*.exe
+*.ilk
+*.pdb
+*.obj
+*.log
+*.pch
+*.idb
+*.tlog
+*.lastbuildstate
+*.suo
+*.db

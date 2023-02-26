@@ -1,0 +1,17 @@
+기말고사
+
+1. 소소코드 내 주석으로 학과/학번/이름을 넣을것.
+2. 파일명은 TCPserver.cpp 로 작성할 것.  (학번_이름.zip)
+3. 파일 내 수정/추가된 부분은 주석문 처리하여 설명할 것.
+4. 제출 시 이메일 bskoh@kpu.ac.kr 로도 같이 보낼 것.
+5. 제출 시간은 온라인 제출 완료 시점임. 미제출 시 0점 처리
+
+문제1)
+예제파일인 TCPserver.cpp 파일을 활용하여 소켓 옵션인 SO_LINGER 옵션을 이용하여 TCP Client가 보내는
+ 데이터에 특정문자(예:quit) 문자열이 포함되어 있으면 강제 종료하는 코드를 작성하시오.
+
+
+LINGER optval;
+		optval.l_onoff = 1;
+		optval.l_linger = 1;
+		retval = setsockopt(client_sock, SOL_SOCKET, SO_LINGER, (char*)&optval, sizeof(optval));

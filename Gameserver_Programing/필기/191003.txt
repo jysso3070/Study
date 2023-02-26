@@ -1,0 +1,59 @@
+iocp동작루프
+for 
+    iocp = new iocp
+    iocp.add(s)
+while
+  event = iocp.wait()
+
+
+Create io Completion port
+  - iocp생성, socket 등록
+Get Queued Completion Status
+  - 이 함수를 실행한 thread를 thread pool 풀에 놓는다.
+  - 완료된 io의 상태를 하나 리턴한다.
+
+Device list
+
+io Queue
+ - 디바이스리스트에 있는 io만 저장된다.
+thread pool
+ - 쓰레드들을 생성한후 풀에 넣어서 대기상태로만든다.
+ - Get Queued Completion Status함수로 쓰레드를 넣는다.
+
+iocp서버 설계
+1. iocp생성 초기화 iocp객체는 하나면 충분하다
+2. worker thread 생성 하여 쓰레드를 iocp 쓰레드풀에 등록
+3. accept thread 생성 
+   - 새로운 소켓이 접속하면 iocp에 연결하고 WSARecv호출을 꼭해주ㅜ야한다. 호출해주지 않으면 데이터 송수신 불가능
+ 4. 재사용은 ㄱㅊ
+클라이언트 객체 - SOCKETINFO
+  completion_key가 아이디역할
+
+Overlapped 구초제
+  호출할때 0으로 클리어하게 호출, 네트워크io에서는 안에내용물을 볼필요가없다.
+  하나의 구조체를 동시에 사용하는것이 불가능하다
+    - overlapped 구조체 1. 0으로 초기화
+		    2. 내용을 볼필요가없다.
+		    3. 중복사용 금지(동시사용 금지), 여러소켓 동시 사용 금지 모든 Send, Recv 중복사용금지
+	각각의 소켓에서 WSARecv를 할때 각각 다른 overlapped 구조체를 넣어줘야한다. 절대로 같은것을 리시브하면 안된다.
+  소켓 당 Recv호출은 무조건 한개여야한다.
+  소켓 당 send 호출이 동시에 여러개 있을수있다. send용 overlapped 구초제가 send 개수만큼 필요하다. overlapped구초제를 미리만드는것도
+  메모리낭비 send할때 new로 만들고 send가 완료되었을때 delete한다. 동시사용은 불가하지만 재사용은 가능, 성능을 위해 pool을 만들어 사용
+
+overlapped io pointer 를 확장
+  Get Queued Completion Status가 호출됬을때 send 인지 recv인지 알수가없다.
+  overlapped io 구조체 밑에 buffer를 두어서 주소를 통해알아낸다.
+
+WorkerThread
+ 
+버퍼관리
+ 내부 버퍼가 차서 send가 중간에 잘렷을때
+  - 나머지를 보내면 된다.
+  - 다시 보내기전에 다른쓰레드가 끼어들면?
+     ->소켓을 끊어버린다. 내부버퍼가 가득찼다는것은 서버컴퓨터의 메모리가 다찼다는뜻 
+
+
+iocp서버구현------------
+Recv
+
+

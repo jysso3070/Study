@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\DatabaseManager">
+      <UniqueIdentifier>{aaed4346-4a7d-4b84-b890-a3c1bd0add67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\PacketSend">
+      <UniqueIdentifier>{89cb52e5-ff53-47f7-b7fa-8232db196227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ServerMain">
+      <UniqueIdentifier>{468fab31-80f4-4b32-83fb-49c0bffa2233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SocketInfo">
+      <UniqueIdentifier>{998cce11-b81a-495c-bd13-c560a5501f48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseManager.cpp">
+      <Filter>소스 파일\DatabaseManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketSend.cpp">
+      <Filter>소스 파일\PacketSend</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerMain.cpp">
+      <Filter>소스 파일\ServerMain</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketInfo.cpp">
+      <Filter>소스 파일\SocketInfo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="protocol.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lauxlib.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lua.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lua.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="luaconf.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lualib.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseManager.h">
+      <Filter>소스 파일\DatabaseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketSend.h">
+      <Filter>소스 파일\PacketSend</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerMain.h">
+      <Filter>소스 파일\ServerMain</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketInfo.h">
+      <Filter>소스 파일\SocketInfo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lua53.lib">
+      <Filter>리소스 파일</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="peace_monster.lua">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="war_monster.lua">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+</Project>

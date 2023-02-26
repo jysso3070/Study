@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_fdc48a3ed1274734bdf575e1f8a8bc7d {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_fdc48a3ed1274734bdf575e1f8a8bc7d" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_fdc48a3ed1274734bdf575e1f8a8bc7d = L.map(
+        'map_fdc48a3ed1274734bdf575e1f8a8bc7d', {
+        center: [37.514669, 127.104356],
+        zoom: 16,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_8420b0c59a1d4c07a1202da1902dee57 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_fdc48a3ed1274734bdf575e1f8a8bc7d);
+    
+        var marker_e5bfec6c7c8f4303be0a4b1a5e7bea53 = L.marker(
+            [37.514669, 127.104356],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_fdc48a3ed1274734bdf575e1f8a8bc7d);
+        
+    
+
+                var icon_d1c69d14338b458c954b4d51259fd0df = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e5bfec6c7c8f4303be0a4b1a5e7bea53.setIcon(icon_d1c69d14338b458c954b4d51259fd0df);
+            
+    
+            var popup_ab4e88bc60f0407d9ba36c615fe08441 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_77792142892d4937985723f497dd6eb4 = $(`<div id="html_77792142892d4937985723f497dd6eb4" style="width: 100.0%; height: 100.0%;">8호선 잠실역</div>`)[0];
+                popup_ab4e88bc60f0407d9ba36c615fe08441.setContent(html_77792142892d4937985723f497dd6eb4);
+            
+
+            marker_e5bfec6c7c8f4303be0a4b1a5e7bea53.bindPopup(popup_ab4e88bc60f0407d9ba36c615fe08441)
+            ;
+
+            
+        
+</script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_9f2638ea757c42488505bac502ba6724 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_9f2638ea757c42488505bac502ba6724" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_9f2638ea757c42488505bac502ba6724 = L.map(
+        'map_9f2638ea757c42488505bac502ba6724', {
+        center: [37.2662193, 127.0023471],
+        zoom: 16,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_615f1af9f9bb46cbbd7eaf32938d060f = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_9f2638ea757c42488505bac502ba6724);
+    
+        var marker_f3a42ba5991e4df7857e28923ad67534 = L.marker(
+            [37.2662193, 127.0023471],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_9f2638ea757c42488505bac502ba6724);
+        
+    
+
+                var icon_1b5657d2f6844b2fb8a84566fe212111 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f3a42ba5991e4df7857e28923ad67534.setIcon(icon_1b5657d2f6844b2fb8a84566fe212111);
+            
+    
+            var popup_74f5798ce7bb4d8abe2e61cf8d15a1b5 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_05a8f2bd6f9d467b8bcfe4d3d7e56ee0 = $(`<div id="html_05a8f2bd6f9d467b8bcfe4d3d7e56ee0" style="width: 100.0%; height: 100.0%;">역전시장상가 지하주차장</div>`)[0];
+                popup_74f5798ce7bb4d8abe2e61cf8d15a1b5.setContent(html_05a8f2bd6f9d467b8bcfe4d3d7e56ee0);
+            
+
+            marker_f3a42ba5991e4df7857e28923ad67534.bindPopup(popup_74f5798ce7bb4d8abe2e61cf8d15a1b5)
+            ;
+
+            
+        
+</script>

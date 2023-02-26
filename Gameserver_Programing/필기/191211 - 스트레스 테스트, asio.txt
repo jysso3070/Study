@@ -1,0 +1,7 @@
+멀티스레드환경에서는 map를 사용하지말고
+array를 사용 array<clients, maxobject>
+
+
+concurrent_unordered_map 에서 구조체넣을때 
+
+clients.insert(make_pair(user_id, new_player)); pair를 만들어서 삽입해야한다.
